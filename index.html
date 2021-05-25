@@ -27,9 +27,50 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#202020">
   <!-- End Favicon -->
+  <style>
+    /* Show download link on mobile instead */
+    @media only screen and (min-width: 500px) {
+      #mobile {
+        display: none;
+      }
+
+      #normal {
+        display: block;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      #mobile {
+        display: block;
+        margin: 50px 20px;
+      }
+
+      #mobile > p {
+        font-size: 14px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+      }
+
+      #normal {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <embed style="width: 100vw; height: 100vh;" src="./resume.pdf" type="application/pdf" />
+  <div id="mobile">
+    <p>Looks like you're on mobile! (Or your screen is just really small.)</p>
+    <p>It's probably better if you just <b><a href="./resume.pdf">download my resume</a></b> instead!</p>
+    <br />
+    <p>(I've noticed some <a target="_blank" href="https://stackoverflow.com/questions/36382249/embed-pdf-in-mobile-browsers">issues</a> with embedded PDFs on mobile browsers that are probably not worth resolving.)</p>
+  </div>
+  <div id="normal">
+    <object data='./resume.pdf' style="width: 100vw; height: 100vh;">
+      <embed style="width: 100vw; height: 100vh;" src="./resume.pdf" type="application/pdf" />
+      <p>Sad. It looks like your browser doesn't support PDFs.</p>
+      <p>No worries though... you can <a href="./resume.pdf">download my resume instead!</a></p>
+    </object>
+  </div>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- NOTE: -1 is for resume, -2 is for website -->
   <script async src="https://googletagmanager.com/gtag/js?id=UA-123146160-1"></script>
