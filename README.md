@@ -4,9 +4,9 @@ Literally just my resume.
 
 ## About
 
-I want a separate place to host my resume so I can link to it via a subdomain.
+I want a separate place to host my resume, so I can link to it via a subdomain.
 
-Also taking this opportunity to be amazed at just how many files are needed for a "favicon" in 2021. Lol.
+Also taking this opportunity to be amazed at just how many files are needed for a "favicon" in ~~2021~~ 2024. Lol.
 
 ## Development
 
